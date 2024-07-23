@@ -5,20 +5,40 @@ const topTextInput = document.querySelector("#top-text-input");
 const bottomTextInput = document.querySelector("#bottom-text-input");
 const saveImageButton = document.querySelector("#save-button");
 const whatsappButton = document.querySelector("#whatsapp-button");
+const randomImageButton = document.querySelector("#random-image-button");
 
 getImageButton.addEventListener("click", (e) => {
+  generateImage(e);
+});
+
+randomImageButton.addEventListener("click", async (e) => {
   e.preventDefault();
-  const url =
-    "https://www.shutterstock.com/image-vector/computer-cat-animal-meme-pixel-260nw-2415076223.jpg" ||
-    imageURLInput.value;
+  try {
+    const url = await getRandomMemeURL();
+    const text =
+      bottomTextArray[Math.round(Math.random() * bottomTextArray.length)];
+    await generateImage(e, url, text);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+function generateImage(e, randomUrl, text) {
+  e.preventDefault();
+
+  const url = randomUrl || imageURLInput.value;
+
   const image = new Image();
   image.crossOrigin = "anonymous";
   image.src = url;
+  image.width = 400;
+  image.height = 400;
   image.onload = () => {
     currentImage = image;
+    randomBottomText = text;
     drawCanvas();
   };
-});
+}
 
 topTextInput.addEventListener("input", drawCanvas);
 bottomTextInput.addEventListener("input", drawCanvas);
@@ -26,16 +46,20 @@ bottomTextInput.addEventListener("input", drawCanvas);
 function drawCanvas() {
   if (!currentImage) return;
 
-  const topText = topTextInput.value;
-  const bottomText = bottomTextInput.value;
+  const topText = randomBottomText
+    ? "ME WHEN MITCH"
+    : topTextInput.value.toUpperCase();
+  const bottomText = randomBottomText
+    ? randomBottomText.toUpperCase()
+    : bottomTextInput.value.toUpperCase();
 
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
 
-  canvas.width = currentImage.width;
+  canvas.width = 450;
   canvas.height = currentImage.height;
 
-  ctx.drawImage(currentImage, 0, 0);
+  ctx.drawImage(currentImage, 0, 0, 450, currentImage.height);
 
   ctx.font = "30px Impact";
   ctx.textAlign = "center";
@@ -82,4 +106,14 @@ function createImage() {
 
     return link;
   });
+}
+
+async function getRandomMemeURL() {
+  const response = await fetch("https://api.memegen.link/templates/");
+  const templates = await response.json();
+  console.log(templates.length);
+  const templateIds = templates.map((template) => template.id);
+  const randomTemplateId =
+    templateIds[Math.floor(Math.random() * templateIds.length)];
+  return `https://api.memegen.link/images/${randomTemplateId}.png`;
 }
