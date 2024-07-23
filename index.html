@@ -5,14 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Meme Generator</title>
         <link rel="stylesheet" href="./styles.css" />
-        <script src="./scripts.js"></script>
+        <script src="./scripts.js" defer></script>
     </head>
     <body>
         <h1>Meme Generator</h1>
         <form>
-            <label for="image-selector">
+            <label for="image-url-input">
                 Image URL
-                <input type="text" name="image-url" id="image-selector" />
+                <input
+                    type="text"
+                    name="image-url-input"
+                    id="image-url-input"
+                />
+                <button id="get-image-button" class="a">Get</button>
             </label>
             <div id="image-container"></div>
             <label for="top-text-input">
@@ -28,8 +33,8 @@
                 />
             </label>
             <div>
-                <button id="save-button">Save</button>
-                <button id="share-button">Share</button>
+                <a href="" id="save-button">Save</a>
+                <a href="" id="share-button">Share</a>
             </div>
         </form>
     </body>
