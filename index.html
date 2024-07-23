@@ -1,35 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meme Generator</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script> -->
-     <script src="bottom-text.js"></script>
-    <script src="./scripts.js" defer></script>
-  </head>
-  <body>
-    <div id="container">
-      <h1>Meme Generator</h1>
-      <form>
-        <label for="image-url-input">Image URL</label>
-        <input type="text" name="image-url-input" id="image-url-input" />
-        <div id="button-container">
-          <button id="get-image-button">Get Image</button>
-          <button id="random-image-button">Random Meme</button>
-          <button id="upload-image-button">Upload Image</button>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Meme Generator</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <script src="bottom-text.js"></script>
+        <script src="./scripts.js" defer></script>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Meme Generator</h1>
+            <form>
+                <label for="image-url-input">Image URL</label>
+                <input
+                    type="text"
+                    name="image-url-input"
+                    id="image-url-input"
+                />
+                <div id="button-container">
+                    <button id="get-image-button">Get Image</button>
+                    <button id="random-image-button">Random Meme</button>
+                </div>
+                <div id="image-container"></div>
+                <label for="top-text-input">Top Text</label>
+                <input type="text" name="top-text-input" id="top-text-input" />
+                <label for="bottom-text-input">Bottom Text</label>
+                <input
+                    type="text"
+                    name="bottom-text-input"
+                    id="bottom-text-input"
+                />
+                <div class="button-container">
+                    <a href="#" id="save-button">Save</a>
+                    <a href="#" id="whatsapp-button">Whatsapp</a>
+                </div>
+            </form>
         </div>
-        <div id="image-container"></div>
-        <label for="top-text-input">Top Text</label>
-        <input type="text" name="top-text-input" id="top-text-input" />
-        <label for="bottom-text-input">Bottom Text</label>
-        <input type="text" name="bottom-text-input" id="bottom-text-input" />
-        <div class="button-container">
-          <a href="#" id="save-button">Save</a>
-          <a href="#" id="whatsapp-button">Whatsapp</a>
-        </div>
-      </form>
-    </div>
-  </body>
+    </body>
 </html>

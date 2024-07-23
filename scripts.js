@@ -17,7 +17,7 @@ randomImageButton.addEventListener("click", async (e) => {
     const url = await getRandomMemeURL();
     const text =
       bottomTextArray[Math.round(Math.random() * bottomTextArray.length)];
-    await generateImage(e, url, text);
+    generateImage(e, url, text);
   } catch (err) {
     console.log(err);
   }
@@ -92,10 +92,10 @@ saveImageButton.addEventListener("click", (e) => {
 whatsappButton.addEventListener("click", (e) => {
   createImage().then((link) => {
     const imageUrl = link.href;
-    e.target.setAttribute(
-      "href",
-      "whatsapp://send?text=" + encodeURIComponent(imageUrl)
-    );
+
+    const href = "https://wa.me/?text=" + encodeURIComponent(imageUrl);
+    e.target.setAttribute("href", href);
+    console.log(href);
   });
 });
 
