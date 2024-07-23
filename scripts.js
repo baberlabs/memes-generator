@@ -3,48 +3,65 @@ const getImageButton = document.querySelector("#get-image-button");
 const imageContainer = document.querySelector("#image-container");
 const topTextInput = document.querySelector("#top-text-input");
 const bottomTextInput = document.querySelector("#bottom-text-input");
+const saveImageButton = document.querySelector("#save-button");
 
 getImageButton.addEventListener("click", (e) => {
   e.preventDefault();
-  const url = imageURLInput.value;
-  const image = document.createElement("img");
-  // image.src = url;
-  image.src =
-    "https://www.shutterstock.com/image-vector/computer-cat-animal-meme-pixel-260nw-2415076223.jpg";
+  const url =
+    "https://www.shutterstock.com/image-vector/computer-cat-animal-meme-pixel-260nw-2415076223.jpg" ||
+    imageURLInput.value;
+  const image = new Image();
+  image.crossOrigin = "anonymous";
+  image.src = url;
+  image.onload = () => {
+    currentImage = image;
+    drawCanvas();
+  };
+});
+
+topTextInput.addEventListener("input", drawCanvas);
+bottomTextInput.addEventListener("input", drawCanvas);
+
+function drawCanvas() {
+  if (!currentImage) return;
+
+  const topText = topTextInput.value;
+  const bottomText = bottomTextInput.value;
+
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = currentImage.width;
+  canvas.height = currentImage.height;
+
+  ctx.drawImage(currentImage, 0, 0);
+
+  ctx.font = "30px Impact";
+  ctx.textAlign = "center";
+  ctx.fillStyle = "white";
+  ctx.strokeStyle = "black";
+  ctx.lineWidth = 2;
+
+  if (topText) {
+    ctx.fillText(topText, canvas.width / 2, 50);
+    ctx.strokeText(topText, canvas.width / 2, 50);
+  }
+
+  if (bottomText) {
+    ctx.fillText(bottomText, canvas.width / 2, canvas.height - 20);
+    ctx.strokeText(bottomText, canvas.width / 2, canvas.height - 20);
+  }
+
   imageContainer.innerHTML = "";
-  imageContainer.appendChild(image);
-});
-
-topTextInput.addEventListener("input", (e) => {
-  createElement("top-text-p", 0, undefined, e);
-});
-
-bottomTextInput.addEventListener("input", (e) => {
-  createElement("bottom-text-p", undefined, 0, e);
-});
-
-function createElement(className, top, bottom, e) {
-  const existingElement = document.querySelector(`.${className}`) || undefined;
-
-  if (existingElement) {
-    imageContainer.removeChild(existingElement);
-  }
-
-  const text = e.target.value;
-  const element = document.createElement("p");
-
-  element.style.position = "absolute";
-  element.style.zIndex = 10;
-  element.innerText = text;
-  element.classList.add(className);
-
-  if (top !== undefined) {
-    element.style.top = top;
-  }
-
-  if (bottom !== undefined) {
-    element.style.bottom = bottom;
-  }
-
-  imageContainer.appendChild(element);
+  imageContainer.appendChild(canvas);
 }
+
+saveImageButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  html2canvas(imageContainer).then((canvas) => {
+    const link = document.createElement("a");
+    link.href = canvas.toDataURL("image/png");
+    link.download = "meme.png";
+    link.click();
+  });
+});
