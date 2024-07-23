@@ -4,6 +4,7 @@ const imageContainer = document.querySelector("#image-container");
 const topTextInput = document.querySelector("#top-text-input");
 const bottomTextInput = document.querySelector("#bottom-text-input");
 const saveImageButton = document.querySelector("#save-button");
+const whatsappButton = document.querySelector("#whatsapp-button");
 
 getImageButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -58,10 +59,27 @@ function drawCanvas() {
 
 saveImageButton.addEventListener("click", (e) => {
   e.preventDefault();
-  html2canvas(imageContainer).then((canvas) => {
-    const link = document.createElement("a");
-    link.href = canvas.toDataURL("image/png");
+  createImage().then((link) => {
     link.download = "meme.png";
     link.click();
   });
 });
+
+whatsappButton.addEventListener("click", (e) => {
+  createImage().then((link) => {
+    const imageUrl = link.href;
+    e.target.setAttribute(
+      "href",
+      "whatsapp://send?text=" + encodeURIComponent(imageUrl)
+    );
+  });
+});
+
+function createImage() {
+  return html2canvas(imageContainer).then((canvas) => {
+    const link = document.createElement("a");
+    link.href = canvas.toDataURL("image/png");
+
+    return link;
+  });
+}
