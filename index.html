@@ -4,39 +4,68 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Meme Generator</title>
-        <link rel="stylesheet" href="./styles.css" />
-        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-        <script src="bottom-text.js"></script>
-        <script src="./scripts.js" defer></script>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        <script src="script.js" defer></script>
     </head>
     <body>
-        <div id="container">
+        <main>
             <h1>Meme Generator</h1>
             <form>
-                <label for="image-url-input">Image URL</label>
-                <input
-                    type="text"
-                    name="image-url-input"
-                    id="image-url-input"
-                />
-                <div id="button-container">
-                    <button id="get-image-button">Get Image</button>
-                    <button id="random-image-button">Random Meme</button>
+                <div class="buttons-container">
+                    <button class="button-upload-image">Upload Image</button>
+                    <button class="button-show-url-inputs" disabled>
+                        Image From URL
+                    </button>
+                    <button class="button-get-random-image">
+                        Random Image
+                    </button>
                 </div>
-                <div id="image-container"></div>
-                <label for="top-text-input">Top Text</label>
-                <input type="text" name="top-text-input" id="top-text-input" />
-                <label for="bottom-text-input">Bottom Text</label>
-                <input
-                    type="text"
-                    name="bottom-text-input"
-                    id="bottom-text-input"
-                />
-                <div class="button-container">
-                    <a href="#" id="save-button">Save</a>
-                    <a href="#" id="whatsapp-button">Whatsapp</a>
+                <div class="get-url-container">
+                    <input
+                        type="text"
+                        id="input-url-image"
+                        placeholder="https://your-image-url..."
+                    />
+                    <button class="button-get-url">Get Image From URL</button>
+                </div>
+                <div class="image-container">
+                    <p class="top-text">Top Text</p>
+                    <!-- <img src="" width="400px" height="400px" /> -->
+                    <p class="bottom-text">Bottom Text</p>
+                </div>
+                <div class="buttons-container">
+                    <button class="button-type-text" disabled>
+                        Type Your Own Text
+                    </button>
+                    <button class="button-random-text">
+                        Generate Random Text
+                    </button>
+                </div>
+                <div class="inputs-container">
+                    <div class="input-container">
+                        <label for="input-top-text">Top Text</label>
+                        <input
+                            type="text"
+                            id="input-top-text"
+                            value="top text"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <label for="input-bottom-text">Bottom Text</label>
+                        <input
+                            type="text"
+                            id="input-bottom-text"
+                            value="bottom text"
+                        />
+                    </div>
+                </div>
+
+                <div>
+                    <button class="button-save" disabled>Save</button>
+                    <button class="button-share" disabled>Share</button>
                 </div>
             </form>
-        </div>
+        </main>
     </body>
 </html>

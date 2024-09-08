@@ -1,0 +1,254 @@
+{
+  "memes": [
+    {
+      "id": 1,
+      "topText": "When Mitch says 'Let's talk about recursion'",
+      "bottomText": "...Let's talk about recursion"
+    },
+    {
+      "id": 2,
+      "topText": "Mitch: 'Any questions about async/await?'",
+      "bottomText": "Students: *still buffering*"
+    },
+    {
+      "id": 3,
+      "topText": "When you finally understand closures",
+      "bottomText": "Mitch: 'Close, but no cigar'"
+    },
+    {
+      "id": 4,
+      "topText": "Mitch explaining promises",
+      "bottomText": "I promise it'll make sense... eventually"
+    },
+    {
+      "id": 5,
+      "topText": "When Mitch finds an undocumented function",
+      "bottomText": "It's a magical mystery tour"
+    },
+    {
+      "id": 6,
+      "topText": "Mitch: 'Let's refactor this code'",
+      "bottomText": "Everyone: *sweats in spaghetti code*"
+    },
+    {
+      "id": 7,
+      "topText": "When Mitch starts talking about RegEx",
+      "bottomText": "Escape while you still can!"
+    },
+    {
+      "id": 8,
+      "topText": "Mitch's face when someone uses 'var' in 2024",
+      "bottomText": "Let it go, let it const go!"
+    },
+    {
+      "id": 9,
+      "topText": "When Mitch says 'This is a simple concept'",
+      "bottomText": "Narrator: It was not simple"
+    },
+    {
+      "id": 10,
+      "topText": "Mitch introducing TypeScript",
+      "bottomText": "JavaScript, but make it fancy"
+    },
+    {
+      "id": 11,
+      "topText": "When Mitch's code doesn't work first try",
+      "bottomText": "A glitch in the Matrix"
+    },
+    {
+      "id": 12,
+      "topText": "Mitch: 'Let's talk about error handling'",
+      "bottomText": "Try not to catch feels"
+    },
+    {
+      "id": 13,
+      "topText": "When Mitch introduces middleware",
+      "bottomText": "It's like an onion, it has layers"
+    },
+    {
+      "id": 14,
+      "topText": "Mitch explaining the concept of hoisting",
+      "bottomText": "Do you even lift, bro?"
+    },
+    {
+      "id": 15,
+      "topText": "When Mitch starts a live coding session",
+      "bottomText": "May the odds be ever in your favor"
+    },
+    {
+      "id": 16,
+      "topText": "That face when Mitch finds an infinite loop",
+      "bottomText": "To infinity and beyond!"
+    },
+    {
+      "id": 17,
+      "topText": "Mitch explaining functional programming",
+      "bottomText": "Pure functions, impure confusion"
+    },
+    {
+      "id": 18,
+      "topText": "When Mitch mentions 'edge cases'",
+      "bottomText": "QA testers: 'Our time has come'"
+    },
+    {
+      "id": 19,
+      "topText": "Mitch's reaction to a clever one-liner",
+      "bottomText": "Brevity is the soul of 'wit'"
+    },
+    {
+      "id": 20,
+      "topText": "When Mitch starts talking about Big O again",
+      "bottomText": "O no, not again!"
+    },
+    {
+      "id": 21,
+      "topText": "Mitch explaining the virtual DOM",
+      "bottomText": "It's virtually magic!"
+    },
+    {
+      "id": 22,
+      "topText": "When someone asks Mitch about IE support",
+      "bottomText": "Internet Explorer? I hardly know 'er!"
+    },
+    {
+      "id": 23,
+      "topText": "Mitch introducing WebSockets",
+      "bottomText": "Socket to me, baby!"
+    },
+    {
+      "id": 24,
+      "topText": "When Mitch finds an unhandled promise",
+      "bottomText": "I trusted you!"
+    },
+    {
+      "id": 25,
+      "topText": "Mitch explaining debounce and throttle",
+      "bottomText": "Slow down, you move too fast"
+    },
+    {
+      "id": 26,
+      "topText": "When Mitch introduces SOLID principles",
+      "bottomText": "My code? It's rock SOLID"
+    },
+    {
+      "id": 27,
+      "topText": "Mitch's face when someone mentions jQuery",
+      "bottomText": "What year is it?"
+    },
+    {
+      "id": 28,
+      "topText": "When Mitch talks about code smell",
+      "bottomText": "Something's rotten in the state of Denmark.js"
+    },
+    {
+      "id": 29,
+      "topText": "Mitch explaining currying",
+      "bottomText": "Spice up your functions"
+    },
+    {
+      "id": 30,
+      "topText": "When Mitch introduces serverless",
+      "bottomText": "Where we're going, we don't need servers"
+    },
+    {
+      "id": 31,
+      "topText": "Mitch's reaction to callback hell",
+      "bottomText": "Abandon all hope, ye who enter here"
+    },
+    {
+      "id": 32,
+      "topText": "When Mitch spots a race condition",
+      "bottomText": "Fast and Furious: Tokyo Drift"
+    },
+    {
+      "id": 33,
+      "topText": "Mitch explaining semantic HTML",
+      "bottomText": "The meaning of life (in markup)"
+    },
+    {
+      "id": 34,
+      "topText": "When Mitch introduces microservices",
+      "bottomText": "Divide and conquer, they said. It'll be fun, they said."
+    },
+    {
+      "id": 35,
+      "topText": "Mitch's face when he sees nested callbacks",
+      "bottomText": "We need to go deeper"
+    },
+    {
+      "id": 36,
+      "topText": "When Mitch talks about memoization",
+      "bottomText": "I'll never forget this... I think"
+    },
+    {
+      "id": 37,
+      "topText": "Mitch explaining blockchain to the class",
+      "bottomText": "It's just a fancy linked list, right?"
+    },
+    {
+      "id": 38,
+      "topText": "When Mitch introduces design patterns",
+      "bottomText": "Abstract Factory? I hardly know her!"
+    },
+    {
+      "id": 39,
+      "topText": "Mitch's reaction to 'It works on my machine'",
+      "bottomText": "Then we'll ship your machine"
+    },
+    {
+      "id": 40,
+      "topText": "When Mitch talks about floating point precision",
+      "bottomText": "0.1 + 0.2 ≠ 0.3"
+    },
+    {
+      "id": 41,
+      "topText": "Mitch explaining the event loop",
+      "bottomText": "It's like a merry-go-round, but with callbacks"
+    },
+    {
+      "id": 42,
+      "topText": "When Mitch introduces test-driven development",
+      "bottomText": "Fail first, ask questions later"
+    },
+    {
+      "id": 43,
+      "topText": "Mitch's face when someone forgets to git pull",
+      "bottomText": "Merge conflict incoming!"
+    },
+    {
+      "id": 44,
+      "topText": "When Mitch explains the importance of comments",
+      "bottomText": "// TODO: Write a funny comment"
+    },
+    {
+      "id": 45,
+      "topText": "Mitch introducing the concept of duck typing",
+      "bottomText": "If it walks like a duck and quacks like a duck..."
+    },
+    {
+      "id": 46,
+      "topText": "When Mitch talks about the importance of UX",
+      "bottomText": "Make the logo bigger!"
+    },
+    {
+      "id": 47,
+      "topText": "Mitch's reaction to perfectly aligned code",
+      "bottomText": "Perfectly balanced, as all things should be"
+    },
+    {
+      "id": 48,
+      "topText": "When Mitch introduces pair programming",
+      "bottomText": "Two minds, one keyboard, infinite frustration"
+    },
+    {
+      "id": 49,
+      "topText": "Mitch explaining the concept of rubber duck debugging",
+      "bottomText": "Quack quack, motherducker"
+    },
+    {
+      "id": 50,
+      "topText": "When Mitch talks about the importance of sleep",
+      "bottomText": "while(awake) { code(); } // Infinite loop detected"
+    }
+  ]
+}
