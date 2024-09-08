@@ -1,95 +1,83 @@
-# FORM VALIDATION
+# Memes Generator
 
-Instructions for this sprint can be found here:
+Memes Generator is a fun and interactive web application that allows users to create, customize, and share memes easily. With this tool, you can upload your own images, use random meme templates, add custom text, and save your creations with just a few clicks.
 
-https://l2c.northcoders.com/courses/fe/form-validation
+This project was pair programmed by [Baber Khan](https://github.com/baberlabs) and [Daniel Taylor](https://github.com/DTCoding01).
 
+## Live Demo
 
+Visit [baberlabs.github.io/memes-generator](https://baberlabs.github.io/memes-generator) for a live demo.
 
-## Form choices:
+## Features
 
-Below are some examples of forms that your users could use to submit information. Choose one of the following options or come up with your own theme if you're feeling creative. Just remember, the point of this is to validate the users inputs and provide appropriate feedback so make sure that you can apply some kind of restriction to the user input.
+-   Upload custom images or use random images from the imgflip API
+-   Add custom text to the top and bottom of the meme
+-   Generate random meme text from a curated list
+-   Save generated memes as PNG files
+-   Responsive design for various screen sizes
 
-### Account creation
+## Technologies Used
 
-Design a typical **account creation form** for a fictional website. If all details are valid, `submit` should take the user to a new page showing them the details of their newly created account.
+-   HTML5
+-   CSS3
+-   JavaScript (ES6+)
+-   [html2canvas](https://html2canvas.hertzen.com/) library for image capture
 
-Fields to collect from your user:
+## Getting Started
 
-| Field            | Restrictions                                                                |
-| ---------------- | --------------------------------------------------------------------------- |
-| First Name       | Required                                                                    |
-| Last Name        | Required                                                                    |
-| Username         | Must be a mix of letters and numbers, no other characters or spaces allowed |
-| Avatar Image url | Valid Url                                                                   |
+To run this project locally, follow these steps:
 
-#### Submit Page
+1. Clone the repository:
 
-Once the user has signed up to your website they should be taken to a profile page where they can view all of the information they've just submitted. Think about the layout of profile pages you may have used in the past and create a user friendly site displaying their information.
+    ```
+    git clone https://github.com/baberlabs/memes-generator.git
+    ```
 
-_Additional_
+2. Navigate to the project directory:
 
-- Allow your users to choose between _light_ and _dark_ mode for their profile. Style their profile page according to their preference.
+    ```
+    cd memes-generator
+    ```
 
-### Horoscope Generator
+3. Open `index.html` in your preferred web browser.
 
-Create a form to collect some personal information from the user in order to generate their horoscope. The horoscopes should change based on the information the user has provided but can be generated in any way you see fit.
+## Usage
 
-Fields to collect from your user:
+1. **Upload an Image**: Click on "Upload Image" to select an image from your device.
+2. **Use an Image URL**: Click on "Image From URL" and enter the URL of an image.
+3. **Get a Random Image**: Click on "Random Image" to fetch a random meme template from the imgflip API.
+4. **Add Custom Text**: Type your desired text in the "Top Text" and "Bottom Text" input fields.
+5. **Generate Random Text**: Click on "Generate Random Text" to add random meme text from our curated list.
+6. **Save Your Meme**: Click on "Save" to download your created meme as a PNG file.
+7. **Share Your Meme**: (Feature coming soon)
 
-| Field      | Restrictions                                      |
-| ---------- | ------------------------------------------------- |
-| First Name | Required                                          |
-| Last Name  | Required                                          |
-| Star Sign  | Must be a valid star sign (Aries, Taurus, etc...) |
+## Project Structure
 
-#### Submit Page
+-   `index.html`: Main HTML file
+-   `style.css`: CSS styles for the application
+-   `script.js`: JavaScript file containing the main functionality
+-   `memes.json`: JSON file containing a list of predefined meme texts
 
-Use the users details to display their horoscope. The one they recieve should be based on the star sign they've submitted.
+## Contributing
 
-_Additional_
+We welcome contributions to improve the Memes Generator! If you have suggestions or find any issues, please feel free to open an issue or submit a pull request.
 
-- Collect the users Date of Birth. Generate a different horoscope based upon whether the user is over or under 30 years old.
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Business Card Generator
+## License
 
-Create a form to collect some personal information from the user in order to generate a professional looking business card. The presentation of the card will be very important.
+This project is open source and available under the [MIT License](LICENSE).
 
-Fields to collect from your user:
+## Acknowledgments
 
-| Field        | Restrictions                  |
-| ------------ | ----------------------------- |
-| First Name   | Required                      |
-| Last Name    | Required                      |
-| Company      | Required                      |
-| Job Title    | Required                      |
-| Email        | Must be a valid email address |
-| Phone Number | Must be a valid phone number  |
+-   Thanks to the [imgflip API](https://api.imgflip.com/) for providing random meme templates.
+-   Shout out to the open-source community for the tools and libraries used in this project.
 
-#### Submit Page
+## Contact
 
-Use the users submitted details to produce a professional looking business card.
-
-_Additional_
-
-- Give the users a choice of templates to alter the style of card produced.
-
-### Meme Generator
-
-Create a form that allows users to create their own memes. The form should allow the user to choose an image to caption as well as the accompanying text.
-
-Fields to collect from your user:
-
-| Field        | Restrictions      |
-| ------------ | ----------------- |
-| Top Text     | Max 50 characters |
-| Bottom Text  | Max 50 characters |
-| Image Choice | Required          |
-
-#### Submit Page
-
-The users text superimposed onto their chosen image.
-
-_Additional_
-
-- Allow the users to choose images that require different amounts of text. e.g. 1 or more text inputs.
+-   Baber Khan - [GitHub](https://github.com/baberlabs)
+-   Daniel Taylor - [GitHub](https://github.com/DTCoding01)
